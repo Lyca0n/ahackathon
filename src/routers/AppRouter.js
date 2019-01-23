@@ -1,20 +1,19 @@
 import React from 'react';
 import { Router, Route, Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
 import PublicRoute from './PublicRoute';
-import AddSwitchPage from '../components/AddSwitchPage';
-import EditSwitchPage from '../components/EditSwitchPage';
-
+import HomePage from '../components/HomePage';
+import Nav from '../components/Nav';
 
 export const history = createHistory();
 
 const AppRouter = () => (
   <Router history={history}>
     <div>
+      <Nav/>
       <Switch>
-        <PublicRoute path="/" component={DashboardPage} exact={true} />          
+        <PublicRoute path="/" component={HomePage} exact={true} />          
         <Route path="/404" component={NotFoundPage} />
         <Route  component={NotFoundPage} />
       </Switch>

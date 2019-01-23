@@ -1,5 +1,5 @@
 .button {
-  background: $blue; 
+  background: $light-red; 
   color: white;
   display: inline-block;
   font-size: $font-size-large;
@@ -19,12 +19,12 @@
 }
 
 .button--active{
-  background:$aqua;
-  color:$dark-grey;
+  background:$light-orange;
+  
 }
 
 .button--unactive{
-  background:$dark-grey;  
+  background:$off-white;  
 }
 
 .button--appliance {

@@ -1,11 +1,34 @@
-.nav{
-    margin:0;
-    overflow: hidden;
-    top:0;
-    width: 100vw;
+.nav {
+    
+    margin: 0 auto;
+    padding: 0 $m-size;
+    max-width: 100vh; 
+  }
+  
+  .nav__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size 0;
+    flex-wrap: wrap;
+  }
+  
+  .nav__link {
+    color: $dark-grey;
+    border-radius: 2px;    
     text-decoration: none;
-    position: fixed;
-}
-.nav__brand{
-
-}
+    font-weight: bold;
+    margin : 0 ;
+    padding: $s-size;  
+    a {    
+      margin: $s-size;
+    }
+  }
+  
+  .nav__brand {
+    color: $light-red;
+    text-decoration: none;
+    h1 {
+      margin: 0;
+    }
+  }
