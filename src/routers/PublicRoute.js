@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
-
+import Nav from '../components/Nav';
 
 export const PublicRoute = ({
   isAuthenticated,
@@ -12,7 +12,8 @@ export const PublicRoute = ({
       isAuthenticated ? (
         <Redirect to="/dashboard" />
       ) : (
-          <div>            
+          <div> 
+          <Nav/>                     
           <Component {...props} />
           </div>
         )

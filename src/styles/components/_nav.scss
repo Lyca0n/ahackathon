@@ -1,14 +1,18 @@
-.nav {
-    
-    margin: 0 auto;
-    padding: 0 $m-size;
-    max-width: 100vh; 
+.nav {            
+    width: 85vw; 
+    overflow: hidden;
+    top:0;
+    margin: 0 15vw;
+    position:fixed;
+    height: 10vh;
   }
   
   .nav__list {
-    align-items: center;
+    margin: 0 $m-size ;
+    list-style: none;
+    align-items:center;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: $s-size 0;
     flex-wrap: wrap;
   }
@@ -17,10 +21,13 @@
     color: $dark-grey;        
     text-decoration: none;
     font-weight: bold;
-    margin : 0;
-    padding: $s-size $m-size;   
-    a {          
-      padding: $m-size $m-size;  
+    font-size: $font-size-large;
+    margin : 0;       
+    a {    
+        transition: color .3s ease;      
+        transition: border .3s ease;      
+        margin :$s-size;  
+        padding-bottom: $m-size;
       &:hover{
         border-bottom: 6px solid  $light-red;      
         color: $light-red;
@@ -29,14 +36,13 @@
   }
 
   .nav__link--active{
-    border-bottom: 6px solid  $light-red;      
-    color: $light-red;      
-  }
   
-  .nav__brand {
-    color: $light-red;
-    text-decoration: none;
-    h1 {
-      margin: 0;
+    a{
+        border-bottom: 6px solid  $light-red;      
+        color: $light-red;    
+        margin :$s-size;  
+        padding-bottom: $m-size;
     }
   }
+  
+  

@@ -3,15 +3,28 @@ import React from 'react';
 
 const Nav =()=>(
     <div className="nav">
-        <div className="nav__list">
-        <div className="nav__link">
+        <ul className="nav__list">
+        <li className="nav__link nav__link--active">
             <a>Home</a>
+
+        </li>
+        <li className="nav__link">
             <a>About</a>
+
+        </li>
+        <li className="nav__link">
             <a>Ideas</a>
+
+        </li>
+        <li className="nav__link">
             <a>Schedule</a>
+
+        </li>
+        <li className="nav__link">
             <a>FAQ</a>
-        </div>
-        </div>
+
+        </li>
+        </ul>
     </div>
 );
 
