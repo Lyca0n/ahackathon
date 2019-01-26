@@ -1,6 +1,6 @@
 .landing{
     height: 92vh;
-    background-image: 'images/Radiant-Gradient.svg';
+    background: 'images/Radiant-Gradient.svg';
     background-repeat: no-repeat;
 }
 
@@ -18,6 +18,11 @@
     color:$dark-grey;
     padding: 10rem 0;
     font-size: $font-size-xlarge;
+
+    @media (max-width: $desktop-breakpoint) {
+        max-width: 100%;
+        font-size: $font-size-medium;
+    }
 }
 
 .landing__logo{    
@@ -25,4 +30,8 @@
     padding: $l-size 0;
     margin: 0 ;
     display: block;
+
+    @media (max-width: $desktop-breakpoint) {
+        max-width: 100%;
+    }
 }
