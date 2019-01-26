@@ -1,8 +1,8 @@
 .nav {            
-    width: 85vw; 
+    width: 80vw; 
     overflow: hidden;
     top:0;
-    margin: 0 15vw;
+    margin: 0 20vw;
     position:fixed;
     height: 10vh;
   }
@@ -20,14 +20,14 @@
   .nav__link {
     color: $dark-grey;        
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
     font-size: $font-size-large;
     margin : 0;       
     a {    
         transition: color .3s ease;      
         transition: border .3s ease;      
-        margin :$s-size;  
-        padding-bottom: $m-size;
+        margin :$m-size;  
+        padding: $m-size;
       &:hover{
         border-bottom: 6px solid  $light-red;      
         color: $light-red;

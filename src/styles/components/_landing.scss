@@ -1,0 +1,28 @@
+.landing{
+    height: 92vh;
+    background-image: 'images/Radiant-Gradient.svg';
+    background-repeat: no-repeat;
+}
+
+.landing__content{
+    display: flex;
+    align-items: stretch;
+    justify-content: left;
+
+}
+
+.landing__title{
+    h1{
+        margin: 0;
+    }
+    color:$dark-grey;
+    padding: 10rem 0;
+    font-size: $font-size-xlarge;
+}
+
+.landing__logo{    
+    max-width: 50%;
+    padding: $l-size 0;
+    margin: 0 ;
+    display: block;
+}
