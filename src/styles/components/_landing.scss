@@ -1,7 +1,9 @@
 .landing{
     height: 92vh;
-    background: 'images/Radiant-Gradient.svg';
-    background-repeat: no-repeat;
+    background-image: url('/images/background.svg');    
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .landing__content{
