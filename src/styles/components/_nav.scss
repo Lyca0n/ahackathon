@@ -1,20 +1,22 @@
 .nav {            
-    width: 80vw; 
+    width: 100vw; 
     overflow: hidden;
+    align-content: center;
     top:0;
-    margin: 0 20vw;
+    margin: 0 0vw;
     position:fixed;
     height: 10vh;
+    background-color: #ffffff;
   }
   
-  .nav__list {
-    margin: 0 $m-size ;
+  .nav__list {    
     list-style: none;
     align-items:center;
     display: flex;
     justify-content: flex-start;
     padding: $s-size 0;
     flex-wrap: wrap;
+    max-width: 80vw;
   }
   
   .nav__link {

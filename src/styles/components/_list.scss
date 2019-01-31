@@ -17,7 +17,7 @@
 .list-item {
   border: 1px solid darken($off-white, 7%);
   border-top: none;
-  color: $off-white;
+  color: $dark-grey;
   display: flex;
   flex-direction: column;
   padding: $s-size;
@@ -49,8 +49,7 @@
   word-break: break-all;
 }
 
-.list-item__sub-title {
-  color: $off-white;
+.list-item__sub-title {  
   font-size: $font-size-small;
 }
 
