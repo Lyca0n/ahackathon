@@ -9,7 +9,7 @@ const Landing = ()=> (
             <h1>Drive for Innovation</h1>
         </div>                                       
         <div className="landing__content">
-            
+            <button className="button">Register your idea</button>
         </div>                    
     </div>
     </div> 

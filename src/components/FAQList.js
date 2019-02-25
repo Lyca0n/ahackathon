@@ -7,7 +7,7 @@ export const FAQList= (props)=>(
         <div className="list-header">
             FAQs
         </div>        
-        <div className="list-body">
+        <div className="cards__container">
         {props.faqs.length ===0 ? (   
             <div className="list-item list-item--message">
             <span>No FAQs</span>         

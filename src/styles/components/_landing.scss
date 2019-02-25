@@ -1,6 +1,6 @@
 .landing{
     height: 92vh;
-    background-image: url('/images/bg.svg');    
+    background-image: url('/images/bg.png');    
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -9,8 +9,7 @@
 .landing__content{
     display: flex;
     align-items: stretch;
-    justify-content: left;
-
+    justify-content: center;    
 }
 
 .landing__title{
@@ -39,6 +38,6 @@
 }
 
 .landing__container{
-    background-color: $off-white;
-    opacity: 0.95;
+    background-color: rgba(253,249,249,0.93);    
+    border-radius: 12px;
 }

@@ -1,17 +1,17 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import pinsReducer from '../reducers/pins';
-import switchesReducer from '../reducers/switches';
+import aboutReducer from '../reducers/about';
 import faqReducer from '../reducers/faq';
+import eventsReducer from '../reducers/event';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
   const store = createStore(
     combineReducers({      
-      pins: pinsReducer,
-      switches: switchesReducer,
-      faqs: faqReducer
+      about: aboutReducer,
+      faqs: faqReducer,
+      events: eventsReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
   );
