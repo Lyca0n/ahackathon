@@ -16,23 +16,31 @@ export const ScheduleList = (props) => (
         <div className="content-container">
             <div className="section__title">
                 Schedule
-        </div>
-        <div className="list-header">
-            {props.events[0].datetime.format('YYYY-MM-DD')}
-        </div>
-            <div className="list-body">
-                {props.events.length === 0 ? (
-                    <div className="list-item list-item--message">
-                        <span>No Schedule available</span>
+            </div>
+            <div className="side-menu-layout">
+                <div className="side-menu-layout__controls">
+                    <span className="side-menu-layout__controls__item">{props.events[0].datetime.format('YYYY-MM-DD')}</span>                    
+                </div>
+                <div className="side-menu-layout__content">
+                    <div className="list-header">
+                        {props.events[0].datetime.format('YYYY-MM-DD')}
                     </div>
-                ) : (
-                        props.events.map((event) => {
-                            return <ScheduleItem key={event.indexOf} {...event} />
-                        })
-                    )}
+                    <div className="list-body">
+                        {props.events.length === 0 ? (
+                            <div className="list-item list-item--message">
+                                <span>No Schedule available</span>
+                            </div>
+                        ) : (
+                                props.events.map((event) => {
+                                    return <ScheduleItem key={event.indexOf} {...event} />
+                                })
+                            )}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 );
 
 //map function

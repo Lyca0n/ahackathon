@@ -1,0 +1,32 @@
+.side-menu-layout {
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;  
+    flex-direction: row;
+    height: auto; 
+    width: auto; 
+    max-width: 1920px; 
+    max-height: 100vh;
+    
+    /* This aligns items to the end line on main-axis */  
+  }
+  .side-menu-layout__controls{
+    flex-grow: 1;
+    max-width: 20%;
+    order: 1;    
+  }
+
+  .side-menu-layout__controls__item{
+    font-weight: 600;
+    font-size: $l-size;
+  }
+
+  .side-menu-layout__content{     
+    background: fade-out($off-white, .15);
+    border-radius: 3px;
+    text-align: center;
+    order:2;
+    flex-grow: 3;
+    max-width: 80%;   
+  }
+  
