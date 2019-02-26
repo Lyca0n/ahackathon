@@ -4,7 +4,17 @@ import moment from 'moment';
 const scheduleReducerDefaultState = [
     {
         datetime: moment(),
+        title: "Check in",
+        place: "Extra Miler Room"
+    },
+    {
+        datetime: moment().add(2,'hours'),
         title: "Opening ceremony",
+        place: "Extra Miler Room"
+    },
+    {
+        datetime: moment().add(2,'hours'),
+        title: "Domain Driven Design Workshop",
         place: "Extra Miler Room"
     }
 ];

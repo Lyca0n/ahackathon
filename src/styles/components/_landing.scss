@@ -10,6 +10,7 @@
     display: flex;
     align-items: stretch;
     justify-content: center;    
+    padding-bottom: $l-size;
 }
 
 .landing__title{
@@ -17,7 +18,7 @@
         margin: 0;
     }
     color:$dark-grey;
-    padding: 10rem 0;
+    padding: $xl-size 0 $l-size 0  ;
     font-size: $font-size-xlarge;
 
     @media (max-width: $desktop-breakpoint) {

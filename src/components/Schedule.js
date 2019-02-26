@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-export const ScheduleItem = ({ time, title, place }) => (
+export const ScheduleItem = ({ datetime, title, place }) => (
     <div className="list-item" >
         <div>
-            {time && <h3 className="list-item__title">{time}</h3>}
-            {title && <span className="list-item__sub-title">{title}</span>}
-            {place && <small className="list-item__sub-title">{place}</small>}
+            {{title} && <h3 className="list-item__title">{title}</h3>}
+            {{place} && <span className="list-item__sub-title">{place}</span>}
+            {{datetime} && <span className="list-item__sub-title"> {datetime.format('HH:MM:SS')}</span>}
         </div>
     </div>
 );
@@ -19,11 +19,11 @@ export const ScheduleList = (props) => (
             </div>
             <div className="side-menu-layout">
                 <div className="side-menu-layout__controls">
-                    <span className="side-menu-layout__controls__item">{props.events[0].datetime.format('YYYY-MM-DD')}</span>                    
+                    <span className="side-menu-layout__controls__item side-menu-layout__controls__item--active">{props.events[0].datetime.format('MMM D, YYYY')}</span>                    
                 </div>
                 <div className="side-menu-layout__content">
                     <div className="list-header">
-                        {props.events[0].datetime.format('YYYY-MM-DD')}
+                        {props.events[0].datetime.format('YYYY-MM-DD HH:MM:SS')}
                     </div>
                     <div className="list-body">
                         {props.events.length === 0 ? (

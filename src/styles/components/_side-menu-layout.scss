@@ -17,10 +17,16 @@
   }
 
   .side-menu-layout__controls__item{
-    font-weight: 600;
+    font-weight: 400;
     font-size: $l-size;
+    padding: 0 0 $s-size 0;
   }
 
+  .side-menu-layout__controls__item--active{
+    color: $orange;
+    border-bottom:3px solid $orange;
+  }
+   
   .side-menu-layout__content{     
     background: fade-out($off-white, .15);
     border-radius: 3px;
