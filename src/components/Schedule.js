@@ -23,7 +23,7 @@ export const ScheduleList = (props) => (
                 </div>
                 <div className="side-menu-layout__content">
                     <div className="list-header">
-                        {props.events[0].datetime.format('YYYY-MM-DD HH:MM:SS')}
+                        {props.events[0].datetime.format('YYYY-MM-DD')}
                     </div>
                     <div className="list-body">
                         {props.events.length === 0 ? (
