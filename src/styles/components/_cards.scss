@@ -10,7 +10,19 @@
     height: auto;
     margin: $s-size 0 ;
     padding: $s-size;
-    border-radius: 6px;
-    border-top:6px solid $orange;
+    border-radius: 6px;    
     box-shadow: 0 24px 60px rgba(0,0,0,0.07);    
+    word-break: break-word;
+    &:nth-child(3n){
+        border-top:6px solid $pink;
+    }
+    &:nth-child(3n+1){
+        border-top:6px solid $orange;
+    }
+    &:nth-child(3n+2){
+        border-top:6px solid $red;
+    }
+    @media (max-width: $desktop-breakpoint) {
+        max-width: 100%;
+    }
 }

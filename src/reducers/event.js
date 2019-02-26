@@ -1,8 +1,9 @@
 import * as ActionTypes from '../constants/ActionTypes';
+import moment from 'moment';
 
 const scheduleReducerDefaultState = [
     {
-        time: "0900",
+        datetime: moment(),
         title: "Opening ceremony",
         place: "Extra Miler Room"
     }
