@@ -11,7 +11,20 @@ const ideasReducerDefaultState = [
         benefit: "Open new market of digital sales",
         outcome: "Revenue from alexa generated orders",
         status: "New",
-        files: "idea.pdf" ,       
+        files: "idea.pdf",
+        id:2,
+        submitter: "JV"
+    }, {
+        datetime: moment(),
+        likes: "80",
+        title: "Frequence heatmap",
+        description: "AZ alexa skill to order parts",
+        proposer: "Julio Villalva",
+        benefit: "Open new market of digital sales",
+        outcome: "Revenue from alexa generated orders",
+        status: "New",
+        files: "idea.pdf",
+        id:3,
         submitter: "JV"
     }
 ];

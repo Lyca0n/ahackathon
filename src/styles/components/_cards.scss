@@ -26,3 +26,17 @@
         max-width: 100%;
     }
 }
+
+.card--sliding{    
+    max-width: 49%;    
+    color:$off-white;
+    font-weight: 600;
+    &:nth-child(3n+1){                
+        background-color: rgba($pink,.9);
+        border-top: none;
+    }
+    &:nth-child(3n+2){
+        background-color: rgba($orange,.9);
+        border-top: none;
+    }    
+}
