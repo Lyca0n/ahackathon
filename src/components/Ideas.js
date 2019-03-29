@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+const Idea = (props)=>(
+    <div className="gallery_item">
+    </div>
+)
+
 const Ideas = (props)=>(
     <div className="content-container">
     <div className="section__title">
@@ -8,13 +13,9 @@ const Ideas = (props)=>(
     </div>
     <div className="side-menu-layout">
         <div className="side-menu-layout__controls">
-            
+            <span></span>
         </div>
         <div className="side-menu-layout__content">
-            <div className="list-header">
-                
-            </div>
-            <div className="list-body">
                 {props.ideas.length === 0 ? (
                     <div className="list-item list-item--message">
                         <span>No Schedule available</span>
