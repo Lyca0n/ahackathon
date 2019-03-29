@@ -1,0 +1,27 @@
+import * as ActionTypes from '../constants/ActionTypes';
+import moment from 'moment';
+
+const scheduleReducerDefaultState = [
+    {
+        datetime: moment(),
+        likes: "80",
+        title: "Alexa Skill",
+        description: "AZ alexa skill to order parts",
+        proposer: "Julio Villalva",
+        benefit: "Open new market of digital sales",
+        outcome: "Revenue from alexa generated orders",
+        status: "New",
+        files: "idea.pdf" ,       
+        submitter: "JV"
+    }
+];
+
+export default (state = ideasReducerDefaultState, action) => {
+    switch (action.type) {
+        case ActionTypes.ADD_EVENT:
+            return action.event;
+        default:
+            return state;
+    }
+
+}

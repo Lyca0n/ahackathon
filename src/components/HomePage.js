@@ -4,7 +4,7 @@ import FAQList from './FAQList';
 import Schedule from './Schedule';
 import About from './About';
 import Ideas from './Ideas';
-
+import Footer from './Footer';
 
 const HomePage = ()=>(
     <div className="page-container">              
@@ -13,6 +13,7 @@ const HomePage = ()=>(
     <Ideas/>
     <Schedule/>
     <FAQList/>   
+    <Footer/>
     </div>
 );
 
