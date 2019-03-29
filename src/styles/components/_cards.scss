@@ -2,6 +2,9 @@
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: $desktop-breakpoint) {
+        max-width: 100%;
+    }
 }
 
 .card{
@@ -41,4 +44,6 @@
     }    
 }
 
-.card__sweep-control
+.card__sweep-control{
+    
+}

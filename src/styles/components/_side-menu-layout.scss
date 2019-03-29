@@ -7,6 +7,9 @@
     width: auto; 
     max-width: 1920px; 
     max-height: 100vh;
+    @media (max-width: $desktop-breakpoint) {
+      flex-direction: column;
+    }
     
     /* This aligns items to the end line on main-axis */  
   }
@@ -14,6 +17,9 @@
     flex-grow: 1;
     max-width: 20%;
     order: 1;    
+    @media (max-width: $desktop-breakpoint) {
+        max-width: 90%;
+    }
   }
 
   .side-menu-layout__controls__item{

@@ -2,6 +2,10 @@
   margin: 0 auto;
   padding: 0 $m-size;
   max-width: 60vw;
+
+  @media (max-width: $desktop-breakpoint) {
+    max-width: 80vw;
+}
 }
 
 .content-container--fluid {  
