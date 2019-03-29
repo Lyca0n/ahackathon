@@ -1,7 +1,7 @@
 import * as ActionTypes from '../constants/ActionTypes';
 import moment from 'moment';
 
-const scheduleReducerDefaultState = [
+const ideasReducerDefaultState = [
     {
         datetime: moment(),
         likes: "80",
@@ -18,7 +18,7 @@ const scheduleReducerDefaultState = [
 
 export default (state = ideasReducerDefaultState, action) => {
     switch (action.type) {
-        case ActionTypes.ADD_EVENT:
+        case ActionTypes.ADD_IDEA:
             return action.event;
         default:
             return state;
