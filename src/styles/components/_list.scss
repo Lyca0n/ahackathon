@@ -23,8 +23,16 @@
   flex-direction: column;
   padding: $s-size;
   text-decoration: none;
-  transition: background .3s ease;
   text-align: left;
+    /* This timing applies on the way IN */
+    transition-timing-function: ease-out;
+
+    /* A little slower on the way in */
+    transition: 0.25s;
+    
+    /* Move into place */
+    transform: translateY(0);
+  
   &:hover {
     background: $off-white;
   }
