@@ -1,47 +1,94 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import moment from 'moment';
+import uuid from 'uuid';
 
 export const ScheduleItem = ({ datetime, title, place }) => (
     <div className="list-item" >
         <div>
-            {{title} && <h3 className="list-item__title">{title}</h3>}
-            {{place} && <span className="list-item__sub-title">{place}</span>}
-            {{datetime} && <span className="list-item__sub-title"> {datetime.format('HH:MM:SS')}</span>}
+            {{ title } && <h3 className="list-item__title">{title}</h3>}
+            {{ place } && <span className="list-item__sub-title">{place}</span>}
+            {{ datetime } && <span className="list-item__sub-title"> {datetime}</span>}
         </div>
     </div>
 );
 
-export const ScheduleList = (props) => (
-    <div className="section">
-        <div className="content-container">
-            <div className="section__title">
-                Schedule
-            </div>
-            <div className="side-menu-layout">
-                <div className="side-menu-layout__controls">
-                    <span className="side-menu-layout__controls__item side-menu-layout__controls__item--active">{props.events[0].datetime.format('MMM D, YYYY')}</span>                    
-                </div>
-                <div className="side-menu-layout__content">
-                    <div className="list-header">
-                        {props.events[0].datetime.format('YYYY-MM-DD')}
-                    </div>
-                    <div className="list-body">
-                        {props.events.length === 0 ? (
-                            <div className="list-item list-item--message">
-                                <span>No Schedule available</span>
+export class ScheduleList extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selected: undefined,
+            available: undefined
+        }
+    }
+
+    componentDidMount() {
+        if (this.props.events.length > 0) {
+            const avails = this.getDates(this.props.events);
+            this.setState(() => ({
+                available: avails,
+                selected: avails[0]
+            }))
+        }
+    }
+
+    getDates = (list) => {
+        const dates = new Set(list.map(event => (
+            moment(event.datetime).format('YYYY/MM/DD')
+        )));        
+        return [...dates];
+    }
+
+    render() {
+        const { events } = this.props;
+        const { available, selected } = this.state;
+        if(available) {
+            console.log(available);
+            return (
+                <div className="section">
+                    <div className="content-container">
+                        <div className="section__title">
+                            Schedule
+                        </div>
+                        <div className="side-menu-layout">
+                            <div className="side-menu-layout__controls">
+                                {available.map(index => (
+                                    index === selected ? (
+                                        <span key={uuid()} className="side-menu-layout__controls__item side-menu-layout__controls__item--active ">
+                                            {index}
+                                        </span>
+                                    ) : (
+                                        <span key={uuid()} className="side-menu-layout__controls__item ">
+                                            {index}
+                                        </span>
+                                    )
+                                ))}
+
                             </div>
-                        ) : (
-                                props.events.map((event) => {
-                                    return <ScheduleItem key={event.indexOf} {...event} />
-                                })
-                            )}
+                            <div className="side-menu-layout__content">
+                                <div className="list-header">
+                                    {events[0].datetime}
+                                </div>
+                                <div className="list-body">
+                                    {events.length === 0 ? (
+                                        <div className="list-item list-item--message">
+                                            <span>No Schedule available</span>
+                                        </div>
+                                    ) : (
+                                            events.map((event) => {
+                                                return <ScheduleItem key={event.id} {...event} />
+                                            })
+                                        )}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-);
+            );
+        }
+        return null;
+    }
+}
 
 //map function
 const mapStateToProps = (state) => {

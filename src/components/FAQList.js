@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 export const FAQItem = ({ question, answer }) => (
-    <div className="card" >
+    <div className="card">
         <div>
             {question && <h3 className="">{question}</h3>}
             {answer && <span className="">{answer}</span>}
@@ -23,7 +23,7 @@ export const FAQList = (props) => (
                     </div>
                 ) : (
                         props.faqs.map((faq) => {
-                            return <FAQItem key={faq.indexOf} {...faq} />
+                            return <FAQItem key={faq.id} {...faq} />
                         })
                     )}
             </div>

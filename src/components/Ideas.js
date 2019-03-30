@@ -13,7 +13,7 @@ const Ideas = (props) => (
                 Ideas
     </div>
             <div className="side-menu-layout">
-                <div className="side-menu-layout__controls" style={{marginRight:"1.6rem"}}>
+                <div className="side-menu-layout__controls">
                     <p>
                     Do you have an awesome idea to revolutionize our business, step forward,
                     meanwhile you can also check some of the other proposals from your peers.</p>
