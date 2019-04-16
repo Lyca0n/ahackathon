@@ -1,28 +1,26 @@
 import React from 'react';
-
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Nav =()=>(
     <div className="nav">
         <ul className="nav__list">
         <li className="nav__link nav__link--active">
-            <a>Home</a>
+            <Link to="#home">Home</Link>
 
         </li>
         <li className="nav__link">
-            <a>About</a>
+            <Link to="#about">About</Link>
+        </li>
+        <li className="nav__link">
+        <Link to="#ideas">Ideas</Link>
 
         </li>
         <li className="nav__link">
-            <a>Ideas</a>
+        <Link to="#schedule">Schedule</Link>
 
         </li>
         <li className="nav__link">
-            <a>Schedule</a>
-
-        </li>
-        <li className="nav__link">
-            <a>FAQ</a>
-
+            <Link to="#faq">FAQs</Link>
         </li>
         </ul>
     </div>

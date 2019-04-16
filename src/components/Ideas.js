@@ -7,7 +7,7 @@ const Idea = (props) => (
 )
 
 const Ideas = (props) => (
-    <div className="section">
+    <div className="section" id="ideas">
         <div className="content-container">
             <div className="section__title">
                 Ideas

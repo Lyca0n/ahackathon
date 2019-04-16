@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Landing = ()=> (
-    <div className="landing">
+    <div className="landing" id="home">
     <div className="content-container landing__container">
         <div className="landing__title">
             <span >June 8 - June 10, 2019</span>

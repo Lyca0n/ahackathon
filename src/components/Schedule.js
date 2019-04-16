@@ -45,7 +45,7 @@ export class ScheduleList extends React.Component {
         if(available) {
             console.log(available);
             return (
-                <div className="section">
+                <div className="section" id="schedule">
                     <div className="content-container">
                         <div className="section__title">
                             Schedule

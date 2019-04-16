@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Ideas = () => (
-    <div className="section">
+    <div className="section" id="about">
         <div className="content-container">
             <div className="section__title">
                 About
             </div>
             <div className="billboard">
-                <h2>Event Date: June 8 - June 10</h2>
+                <h2>Event Date: July 5 - July 7</h2>
                 <span>
                     <h3>What is a Hackathon?</h3>
                     A hackathon is an event where people from all different backgrounds work together to learn new skills and develop innovative solutions to real problems.                            

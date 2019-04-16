@@ -11,7 +11,7 @@ export const FAQItem = ({ question, answer }) => (
 );
 
 export const FAQList = (props) => (
-    <div className="section">
+    <div className="section" id="faq">
         <div className="content-container">
             <div className="section__title">
                 FAQs
