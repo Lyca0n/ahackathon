@@ -92,8 +92,8 @@ const faqReducerDefaultState = [
 
 export default (state = faqReducerDefaultState, action) => {
     switch (action.type) {
-        case ActionTypes.ADD_PINS:
-            return action.pins;
+        case ActionTypes.ADD_FAQS:
+            return action.faq;
         default:
             return state;
     }

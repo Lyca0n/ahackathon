@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
-import uuid from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 export const ScheduleItem = ({ datetime, title, place }) => (
     <div className="list-item" >
@@ -54,11 +54,11 @@ export class ScheduleList extends React.Component {
                             <div className="side-menu-layout__controls">
                                 {available.map(index => (
                                     index === selected ? (
-                                        <span key={uuid()} className="side-menu-layout__controls__item side-menu-layout__controls__item--active ">
+                                        <span key={uuidv4()} className="side-menu-layout__controls__item side-menu-layout__controls__item--active ">
                                             {index}
                                         </span>
                                     ) : (
-                                        <span key={uuid()} className="side-menu-layout__controls__item ">
+                                        <span key={uuidv4()} className="side-menu-layout__controls__item ">
                                             {index}
                                         </span>
                                     )

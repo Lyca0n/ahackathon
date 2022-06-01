@@ -7,3 +7,5 @@ export const ADD_EVENTS = 'ADD_EVENTS';
 export const ADD_IDEA = 'ADD_IDEA';
 export const ADD_IDEAS= 'ADD_IDEAS';
 export const DELETE_IDEA= 'DELETE_IDEA';
+
+export const ADD_FAQS= 'ADD_IDEAS';
